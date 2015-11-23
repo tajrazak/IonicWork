@@ -1,0 +1,29 @@
+<ion-view>
+  <ion-content>
+    <div ng-controller="loginCtrl" style="padding-top:70px;">
+      <div style="padding-left:108px;">
+        <ion-list class="item-remove-animate item-avatar">
+          <img src="img/profile_icon-circle.png" style="height:140px;width:140px;">
+        </ion-list>
+      </div>
+
+      <div class="list list-inset" style="padding-left:20px;padding-right:20px;">
+        <label class="item item-input">
+          <input type="text" placeholder="Email" ng-model="login.username">
+        </label>
+
+        <label class="item item-input">
+          <input type="password" placeholder="Password" ng-model="login.password">
+        </label>
+        <br/>
+        <br/>
+        <button class="button button-block button-positive" ng-click="submit()">
+          Login
+        </button>
+      </div>
+
+      <br/>
+
+    </div>
+  </ion-content>
+</ion-view>

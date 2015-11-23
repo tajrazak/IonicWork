@@ -1,0 +1,11 @@
+/* Empty. Add your own CSS if you like */
+#staritem > a {
+text-decoration: none;
+color:#EF763A;
+}
+#staritem{
+margin-left:75px;
+}
+#staritem > a:hover{
+color:#F40318;
+}

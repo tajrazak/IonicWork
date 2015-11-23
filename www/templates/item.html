@@ -1,0 +1,38 @@
+<ion-view>
+  <ion-content  style="padding-top:5px;">
+    <div class="card" ng-controller="itemCtrl">
+
+      <div class="item">
+        <h1 class="title" style="font-size:30px;">{{itemData.title}}</h1>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" ng-src="http://192.168.199.104:3000/{{itemData.picurl}}" style="border:1px solid;">
+        <p>
+          {{itemData.description}}
+        </p>
+        <div>
+          Price {{itemData.price|currency}}
+
+          <span id="staritem">
+            <span>Rating</span>
+            <a href="" class="fa fa-star-o" id="star-5" type="radio" name="star"/></a>
+            <a href="" class="fa fa-star-o" id="star-5" type="radio" name="star"/></a>
+            <a href="" class="fa fa-star-o" id="star-5" type="radio" name="star"/></a>
+            <a href="" class="fa fa-star-o" id="star-5" type="radio" name="star"/></a>
+            <a href="" class="fa fa-star-o" id="star-5" type="radio" name="star"/></a>
+          </span>
+        </div>
+      </div>
+      <div class="item">
+
+        <button class="button button-clear button-positive" style="border-radius:10px;">
+          Add To Cart
+          <i class="fa fa-shopping-cart"></i>
+        </button>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>
