@@ -4,7 +4,7 @@
     <div ng-controller="homeCtrl">
       <div class="list">
         <span ng-repeat="item in itemsData">
-          <a class="item item-thumbnail-left" href="#/item/:{{item.item_type}}/data/:{{item.title}}" ng-click="showDetails(item)">
+          <a class="item item-thumbnail-left" nav-transition="ios" href="#/item/:{{item.item_type}}/data/:{{item.title}}" ng-click="showDetails(item)">
             <img ng-src="http://192.168.199.104:3000/{{item.picurl}}">
             <h2>{{item.title}}</h2>
             <p>{{item.item_type}}</p>

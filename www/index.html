@@ -29,17 +29,17 @@
 </head>
 <body ng-app="starter">
 
-  <ion-nav-bar class="bar bar-header bar-dark" ng-controller="navBackCtrl">
+  <ion-nav-bar class="bar bar-header bar-dark" ng-controller="navBackCtrl" align-title="center">
+
     <h1 class="title">bar-dark</h1>
     <ion-nav-back-button ng-click="goBack()" ng-hide="visible">
       {{title}}
     </ion-nav-back-button>
 
     <ion-nav-title>
-           {{maintitle}}
+      <button class="button button-icon icon ion-navicon"></button>  {{maintitle}}
     </ion-nav-title>
-
-  </ion-nav-bar>
+</ion-nav-bar>
 
 
   <ion-nav-view></ion-nav-view>
