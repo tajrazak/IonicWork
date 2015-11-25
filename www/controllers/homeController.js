@@ -1,9 +1,8 @@
-app.controller('homeCtrl',function($scope,$http,$q,$location,$rootScope){
+app.controller('homeCtrl',function($scope,$http,$q,$location,$rootScope,$state,userService){
 
-// $('ion-header-bar').remove();
-// $('body').append('<my-dir></my-dir>')
-$rootScope.visible=true;
-
+  // $('ion-header-bar').remove();
+  // $('body').append('<my-dir></my-dir>')
+  $rootScope.visible=true;
   var first=$http.get('http://localhost:3000/getItems'),
   second=$http.get('http://localhost:3000/getPics');
 
@@ -14,18 +13,17 @@ $rootScope.visible=true;
         if(pics.hasOwnProperty(item.id))
         item.picurl=pics[item.id];
       });
-
-
     })
 
-   console.log(results[0].data.items)
-   $scope.itemsData=results[0].data.items;
+    console.log(results[0].data.items)
+    $scope.itemsData=results[0].data.items;
   })
 
-$scope.showDetails=function(item){
-$rootScope.maintitle="";
-$rootScope.itemData=item;
-}
+  $scope.showDetails=function(item){
+    $state.go('menu.item')
+    //console.log(item)
+    $rootScope.itemData=item;
+  }
 
 
 
